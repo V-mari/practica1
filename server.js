@@ -19,7 +19,9 @@ app.get('/items1', (req, res) =>{
     console.log()
     res.status(200).json(items);
 });
+
 //endpoint 2 / rutas POST
+
 app.post('/items2', (req, res) =>{
     const fruta = req.body; 
     if (fruta) {
@@ -30,7 +32,9 @@ app.post('/items2', (req, res) =>{
         res.status(400).send("este item es invalido");
     }
 });
+
 //endpoint 3 / rutas PUT
+
 app.put('/items/:id', (req, res) =>{
     const index = req.params.id;
     console.log(index);
@@ -43,7 +47,9 @@ app.put('/items/:id', (req, res) =>{
         res.status(400).send('Error al actualizar la fruta');
     }
 });
+
 //endpoint 4 / rutas DELETE
+
 app.delete('/items/:index', (req, res) =>{
     console.log(req.params['index']);
     const index = req.params['index'];
